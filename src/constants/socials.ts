@@ -1,28 +1,28 @@
 export interface SocialsDetails {
+  display: string;
   url: string;
-  color: string;
   logo: string;
 }
 
 export const socials: SocialsDetails[] = [
   {
+    display: "twitter",
     url: "https://twitter.com/BirryP",
-    color: "lightblue",
-    logo: "../../public/resources/logos/twitter.png",
+    logo: require("../resources/logos/twitter.png"),
   },
   {
+    display: "twitch",
     url: "https://www.twitch.tv/birryp",
-    color: "purple",
-    logo: "../../public/resources/logos/twitch.png",
+    logo: require("../resources/logos/twitch.png"),
   },
   {
-    url: "https://www.youtube.com/user/TwoPieOre",
-    color: "red",
-    logo: "../../public/resources/logos/youtube.png",
+    display: "instagram",
+    url: "https://www.instagram.com/billmpower/?hl=en",
+    logo: require("../resources/logos/instagram.png"),
   },
   {
+    display: "github",
     url: "https://github.com/BirryP",
-    color: "lightgrey",
-    logo: "../../public/resources/logos/github.png",
+    logo: require("../resources/logos/github.png"),
   },
 ];

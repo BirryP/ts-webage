@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import TextBox from "./TextBox";
+import HeaderTextBox from "./HeaderTextBox";
 import { HeaderContext, HeaderContextType } from "./context/HeaderContext";
 
 const HeaderClock = () => {
@@ -15,16 +15,15 @@ const HeaderClock = () => {
   });
 
   return (
-    <TextBox
-      text={
-        currentDate.getHours().toString().padStart(2, "0") +
-        ":" +
-        currentDate.getMinutes().toString().padStart(2, "0") +
-        ":" +
-        currentDate.getSeconds().toString().padStart(2, "0")
-      }
-      left="65%"
-    />
+    <HeaderTextBox left="65%">
+      <span>
+        {currentDate.getHours().toString().padStart(2, "0") +
+          ":" +
+          currentDate.getMinutes().toString().padStart(2, "0") +
+          ":" +
+          currentDate.getSeconds().toString().padStart(2, "0")}
+      </span>
+    </HeaderTextBox>
   );
 };
 

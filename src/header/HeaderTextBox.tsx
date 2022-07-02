@@ -12,14 +12,15 @@ const TitleStyle: CSS.Properties = {
   fontFamily: "Lucida Console",
   borderRadius: "25px",
   backgroundColor: "cornsilk",
+  color: "lightcoral",
 };
 
-type TextBoxProps = {
-  text: string;
+type HeaderTextBoxProps = {
   left: string;
+  children: React.ReactNode;
 };
 
-const TextBox = ({ text, left }: TextBoxProps) => {
+const HeaderTextBox = ({ left, children }: HeaderTextBoxProps) => {
   return (
     <div
       style={{
@@ -27,9 +28,9 @@ const TextBox = ({ text, left }: TextBoxProps) => {
         left,
       }}
     >
-      <span style={{ color: "lightcoral" }}>{text}</span>
+      {children}
     </div>
   );
 };
 
-export default TextBox;
+export default HeaderTextBox;
